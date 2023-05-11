@@ -63,6 +63,7 @@ class Players(models.Model):
     id             = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
     player_name           = models.CharField(null=False,blank=False,max_length=100)
     discord_username           = models.CharField(null=False,blank=False,unique=True,max_length=100)
+    password = models.CharField(null=False,blank=False,max_length=100)
     team                    = models.ForeignKey(Teams,on_delete=models.SET_NULL,null=True,blank=True)
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="created at", null=True)
     
@@ -93,6 +94,8 @@ class inventory(models.Model):
     id = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
     player_id =  models.ForeignKey(Players,on_delete=models.SET_NULL,null=True,blank=True)
     item_name =  models.CharField(null=True,blank=True,max_length=1000)
+    item_type = models.CharField(null=True,blank=True,max_length=1000)
+    item_count = models.UUIDField(primary_key=True,default=uuid.uuid4,editable=False)
     class Meta:
         ordering = ['item_name']
     def __str__(self):

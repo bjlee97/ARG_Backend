@@ -319,10 +319,6 @@ def createAndServeImage(request):
         return response
 
 
-
-
-
-
 @api_view(http_method_names=['GET'])
 def get_inventory(request):
     inventory_data = models.inventory.objects.all().values()
