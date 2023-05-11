@@ -1,0 +1,23 @@
+[0;1;32m●[0m gunicorn.service - gunicorn daemon
+     Loaded: loaded (/etc/systemd/system/gunicorn.service; disabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Thu 2022-12-08 15:21:33 PST; 4 months 15 days ago
+TriggeredBy: [0;1;32m●[0m gunicorn.socket
+   Main PID: 2057777 (gunicorn)
+      Tasks: 7 (limit: 2338)
+     Memory: 166.5M
+     CGroup: /system.slice/gunicorn.service
+             ├─2057777 /home/sai/resilience_backend/resilience_env/bin/python /home/sai/resilience_backend/resilience_env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock resilience_backend.wsgi:application
+             ├─2057794 /home/sai/resilience_backend/resilience_env/bin/python /home/sai/resilience_backend/resilience_env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock resilience_backend.wsgi:application
+             ├─2057795 /home/sai/resilience_backend/resilience_env/bin/python /home/sai/resilience_backend/resilience_env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock resilience_backend.wsgi:application
+             └─2057796 /home/sai/resilience_backend/resilience_env/bin/python /home/sai/resilience_backend/resilience_env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/run/gunicorn.sock resilience_backend.wsgi:application
+
+Apr 24 11:25:59 LUX gunicorn[2057796]:  - - [24/Apr/2023:11:25:59 -0700] "POST /admin/login/?next=/admin/ HTTP/1.0" 302 0 "https://137.184.75.1/admin/login/?next=/admin/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+Apr 24 11:25:59 LUX gunicorn[2057796]:  - - [24/Apr/2023:11:25:59 -0700] "GET /admin/ HTTP/1.0" 200 9254 "https://137.184.75.1/admin/login/?next=/admin/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+Apr 24 11:29:21 LUX gunicorn[2057795]:  - - [24/Apr/2023:11:29:21 -0700] "GET /admin/ HTTP/1.0" 200 9254 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+Apr 24 11:39:39 LUX gunicorn[2057795]:  - - [24/Apr/2023:11:39:39 -0700] "GET /admin/ HTTP/1.0" 200 9254 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+Apr 24 11:39:41 LUX gunicorn[2057796]:  - - [24/Apr/2023:11:39:41 -0700] "GET /admin/ HTTP/1.0" 200 9254 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+Apr 24 11:39:43 LUX gunicorn[2057794]:  - - [24/Apr/2023:11:39:43 -0700] "GET /admin/ HTTP/1.0" 200 9254 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+Apr 24 11:40:30 LUX gunicorn[2057794]:  - - [24/Apr/2023:11:40:30 -0700] "GET /admin/ HTTP/1.0" 200 9254 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+Apr 24 11:40:33 LUX gunicorn[2057796]:  - - [24/Apr/2023:11:40:32 -0700] "GET /admin/ HTTP/1.0" 200 9254 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+Apr 24 11:41:51 LUX gunicorn[2057794]:  - - [24/Apr/2023:11:41:51 -0700] "GET /admin/ HTTP/1.0" 200 9254 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
+Apr 24 11:41:53 LUX gunicorn[2057795]:  - - [24/Apr/2023:11:41:53 -0700] "GET /admin/ HTTP/1.0" 200 9254 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
